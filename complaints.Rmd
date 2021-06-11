@@ -1,7 +1,7 @@
 ---
 title: "Police Complaints"
-author: "David Kane"
-date: "6/6/2021"
+author: "Anmay Gupta"
+date: "6/10/2021"
 output: html_document
 ---
 
@@ -22,8 +22,6 @@ raw_nyc_data <- read_csv("https://raw.githubusercontent.com/Financial-Times/poli
 raw_chi_data <- read_csv("https://raw.githubusercontent.com/Financial-Times/police-misconduct-complaints-analysis/main/output/chicago_clean.csv") %>%
   select(UID)
 ```
-
-
 ```{r, clean_data}
 clean_phi_data <- raw_phi_data %>% 
   group_by(officer_id) %>% 
