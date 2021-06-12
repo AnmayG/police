@@ -8,6 +8,7 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 library(tidyverse)
+library(primer.data)
 
 # It is somewhat sloppy to include a read_csv() command in the setup chunk.
 # Normally, we would just load libraries here. However, we have not learned
@@ -21,6 +22,7 @@ raw_nyc_data <- read_csv("https://raw.githubusercontent.com/Financial-Times/poli
   select(OfficerID)
 raw_chi_data <- read_csv("https://raw.githubusercontent.com/Financial-Times/police-misconduct-complaints-analysis/main/output/chicago_clean.csv") %>%
   select(UID)
+
 ```
 ```{r, clean_data}
 clean_phi_data <- raw_phi_data %>% 
